@@ -19,47 +19,49 @@
   </head>
   <body>
     <!-- Хэдер сайта-->
-    <header>
-      <nav>
-        <a href="./index.html" title="Логотип сайта" class="logo" lang="en"><span class="accent-text">Web</span>Studio</a>
+    <header class="header-page bordered">
+      <div class="container menu">
+      <nav class="navbar">
+        <a class="logo" href="./index.html" title="Логотип сайта" lang="en"><span class="accent-text">Web</span>Studio</a>
         <ul class="navbar-list">
-          <li class="">
+          <li class="navbar-list-item">
             <a href="./index.html" class="link">Студия</a>
           </li>
-          <li class="">
+          <li class="navbar-list-item">
             <a href="./portfolio.html" class="link accent-text">Портфолио</a>
           </li>
-          <li class="">
+          <li class="navbar-list-item">
             <a href="" class="link">Контакты</a>
           </li>
         </ul>
       </nav>
-      <ul class="navbar-list">
-        <li class="">
-          <a href="mailto:info@devstudio.com" class="link gray-text"
-            >info@devstudio.com</a>
+      <ul class="contact-list">
+        <li class="contact-list-item">
+          <a href="mailto:info@devstudio.com" class="link gray-text">info@devstudio.com</a>
         </li>
-        <li class="">
+        <li class="contact-list-item">
           <a href="tel:+380961111111" class="link gray-text">+38 096 111 11 11</a>
         </li>
       </ul>
+    </div>
     </header>
 
     <main>
-      <section>
+      <section class="examples-section">
+        <div class="container">
         <!--  скрытый заголовок h1-->
         <h1 class="visually-hidden">Наши работы</h1>
-        <ul class="section">
-          <li><button class="button">Все</button></li>
-          <li><button class="button">Веб-сайты</button></li>
-          <li><button class="button">Приложения</button></li>
-          <li><button class="button">Дизайн</button></li>
-          <li><button class="button">Маркетинг</button></li>
+        <ul class="examples-buttons-list">
+          <li class="examples-buttons-item"><button class="button">Все</button></li>
+          <li class="examples-buttons-item"><button class="button">Веб-сайты</button></li>
+          <li class="examples-buttons-item"><button class="button">Приложения</button></li>
+          <li class="examples-buttons-item"><button class="button">Дизайн</button></li>
+          <li class="examples-buttons-item"><button class="button">Маркетинг</button></li>
         </ul>
         <!--  скрытый заголовок h2-->
         <h2 class="visually-hidden">Примеры работ</h2>
-        <ul class="cards-list">
-          <li>
+        <ul class="examples-list">
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio1.jpg"
@@ -70,7 +72,7 @@
               <p class="example-text">Веб-сайт</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio2.jpg"
@@ -83,7 +85,7 @@
               <p class="example-text">Дизайн</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio3.jpg"
@@ -96,7 +98,7 @@
               <p class="example-text">Приложение</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio4.jpg"
@@ -109,7 +111,7 @@
               <p class="example-text">Маркетинг</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio5.jpg"
@@ -122,7 +124,7 @@
               <p class="example-text">Приложение</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio6.jpg"
@@ -135,7 +137,7 @@
               <p class="example-text">Веб-сайт</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio7.jpg"
@@ -149,7 +151,7 @@
               <p class="example-text">Дизайн</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio8.jpg"
@@ -160,7 +162,7 @@
               <p class="example-text">Маркетинг</p>
             </a>
           </li>
-          <li>
+          <li class="examples-list-item">
             <a href="#" class="link">
               <img
                 src="./images/image-portfolio9.jpg"
@@ -172,20 +174,23 @@
             </a>
           </li>
         </ul>
+      </div>
       </section>
     </main>
 
     <!-- Подвал сайта -->
     <footer class="footer">
+      <div class="container">
       <a href="./index.html" title="Логотип сайта" class="logo" lang="en">
         Web<span class="white-text">Studio</span></a>
       <address class="address">
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
-            <ul>
-              <li><a href="mailto:info@devstudio.com" class="link opacity-text">info@devstudio.com</a></li>
-              <li><a href="tel:+380961111111" class="link opacity-text">+38 096 111 11 11</a></li>
+            <p class="address-text">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="address-list">
+              <li class="address-list-item"><a href="mailto:info@devstudio.com" class="link opacity-text">info@devstudio.com</a></li>
+              <li class="address-list-item"><a href="tel:+380961111111" class="link opacity-text">+38 096 111 11 11</a></li>
             </ul>
       </address>
+    </div>
     </footer>
   </body>
 </html>

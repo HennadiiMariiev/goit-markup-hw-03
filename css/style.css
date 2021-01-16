@@ -41,12 +41,12 @@ a {
   color: var(--accent-color);
 }
 
-.cards-list .link {
+.examples-list .link {
   color: var(--main-color);
 }
 
-.cards-list .link:hover,
-.cards-list .link:focus {
+.examples-list .link:hover,
+.examples-list .link:focus {
   color: var(--main-color);
 }
 
@@ -139,12 +139,16 @@ a {
   margin-left: auto;
 }
 
-.cards-list,
+.examples-list,
 .team-list {
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+.examples-list {
+  flex-wrap: wrap;
 }
 
 .team-list-item {
@@ -157,12 +161,11 @@ a {
 }
 
 .team-list-item,
-.cards-list-item {
+.examples-list-item {
   display: block;
 }
 
-.team-list-item:not(:last-child),
-.cards-list-item:not(:last-child) {
+.team-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -368,7 +371,43 @@ a {
 
 /* Далее стили только portfolio.html */
 
+.bordered {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.examples-section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.examples-buttons-list {
+  padding: 0 0;
+  margin-top: 0;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.examples-buttons-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.examples-list-item {
+  width: calc((100% - 3*30px) / 3);
+  border: 1px solid #EEEEEE;
+}
+
+.examples-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.examples-list-item:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
+
 .example-header {
+  margin: 20px 24px 4px;
+
   font-size: 18px;
   font-weight: 700;
 
@@ -377,6 +416,8 @@ a {
 }
 
 .example-text {
+  margin: 0 24px 20px;
+
   font-size: 16px;
   font-weight: 400;
 
