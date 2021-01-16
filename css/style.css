@@ -1,0 +1,388 @@
+  /* ========= FONT and COLOR ==========*/
+:root {
+  --main-color: #212121;
+  --logo-color: #000000;
+  --accent-color:  #2196f3;
+  --background-dark-color: #2f303a;
+  --background-light-color: #F5F4FA;
+  --active-color: #FFFFFF;
+  --inactive-color: #757575;
+}
+/* ========= END FONT and COLOR ==========*/
+
+/* ========= GENERAL ==========*/
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: .03em;
+
+  color: var(--main-color);
+}
+
+li {
+  list-style-type: none;
+}
+/* ========= END GENERAL ==========*/
+
+
+/* ========= REFERENCES ==========*/
+a {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+.cards-list .link {
+  color: var(--main-color);
+}
+
+.cards-list .link:hover,
+.cards-list .link:focus {
+  color: var(--main-color);
+}
+
+.contact-list-item .link,
+.navbar-list-item .link {
+  padding: 24px 0;
+}
+/* ========= END REFERENCES ==========*/
+
+/* ========= SECTIONS ========== */
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  width: 700px;
+  padding: 200px 2px 200px;
+  text-align: center;
+}
+
+.qualities-section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.work-section .container,
+.team-section .container {
+  text-align: center;
+  padding-bottom: 94px;
+}
+
+.team-section .container{
+  padding-top: 94px;
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* ========= END SECTIONS ========== */
+
+.logo {
+  margin-right: 93px;
+  padding: 24px 0;
+
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--logo-color);
+}
+
+.footer .logo {
+  color: var(--accent-color);
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--logo-color);
+}
+
+.footer .logo:hover,
+.footer .logo:focus {
+  color: var(--accent-color);
+}
+
+.contact-list, 
+.navbar-list {
+  font-weight: 500;
+  letter-spacing: .02em;
+  display: flex;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.contact-list {
+  margin-left: auto;
+}
+
+.cards-list,
+.team-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.team-list-item {
+  background-color: var(--active-color);
+  box-shadow: 0px 1px 3px
+   rgba(0, 0, 0, 0.12), 0px 1px 1px
+    rgba(0, 0, 0, 0.14), 0px 2px 1px
+     rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item,
+.cards-list-item {
+  display: block;
+}
+
+.team-list-item:not(:last-child),
+.cards-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contact-list-item:not(:last-child),
+.navbar-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-list-item,
+.navbar-list-item {
+  padding-top: 32px;
+  padding-bottom: 31px;
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.gray-text {
+  color: var(--inactive-color);
+}
+
+.white-text {
+  color: var(--active-color);
+}
+
+.opacity-text {
+  color: rgba(255,255,255, 60%);
+  line-height: 1.7;
+}
+
+/* ============ HIDDEN ELEMENTS ============ */
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+/* ============ END HIDDEN ELEMENTS ============ */
+
+.hero {
+  background-color: var(--background-dark-color);
+}
+
+.hero-header {
+  margin: 0 auto;
+  padding: 0 2px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: .06em;
+
+  color: var(--active-color);
+  background-color: var(--background-dark-color);
+
+  text-transform: uppercase;
+}
+
+.section-list {
+  display: flex;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.section-list-item {
+  display: block;
+  width: calc((100% - 3 * 30px) / 4 );
+}
+
+.section-list-item:not(:last-child){
+  margin-right: 30px;
+}
+
+.team-section.light {
+  background-color: var(--background-light-color);
+}
+
+.small-header {
+  margin: 0 0;
+
+  font-weight: 700;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.work-section-header,
+.team-section-header {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.work-section-header {
+  margin: 0 0 50px;
+}
+
+.team-section-header {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.team-list-header {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.section-text {
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.7;
+  color: var(--inactive-color);
+}
+
+.team-list-text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  color: var(--inactive-color);
+}
+
+.footer {
+  background-color: var(--background-dark-color);
+  color: var(--active-color);
+}
+
+.footer .logo {
+  padding: 1px 0;
+  margin: 0 0;
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.address-text {
+  margin: 0 0 9px;
+}
+
+.address-list {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.address-list-item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+/* ========== BUTTONS ========== */
+
+.hero-button {
+  min-width: 200px;
+  margin-top: 30px;
+  padding: 10px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: .06;
+
+  background-color: var(--accent-color);
+  color: var(--active-color);
+
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.button {
+  padding: 3px 3px;
+
+  background-color: var(--background-light-color);
+  border: 1px solid var(--background-light-color);
+  border-radius: 4px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--active-color);  
+  background-color: var(--accent-color);
+
+  border: 1px solid var(--accent-color);
+}
+
+/* ========== END BUTTONS ========== */
+
+/* Далее стили только portfolio.html */
+
+.example-header {
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 2;
+  letter-spacing: .06em;
+}
+
+.example-text {
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.9;
+  letter-spacing: .03em;
+
+  color: var(--inactive-color);
+}
+
