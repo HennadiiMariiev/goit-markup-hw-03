@@ -50,8 +50,8 @@ li {
 }
 
 .hero .container {
-  width: 700px;
-  padding: 200px 2px 200px;
+  width: 696px;
+  padding: 200px 0;
 }
 
 .team-section .container,
@@ -107,7 +107,7 @@ a,
 
 .contact-list-item .link,
 .navbar-list-item .link {
-  padding: 24px 0;
+  padding: 31px 0;
 }
 /* ========= END REFERENCES ==========*/
 
@@ -140,8 +140,8 @@ a,
   font-weight: 500;
   letter-spacing: .02em;
   display: flex;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-list {
@@ -181,12 +181,6 @@ a,
 .contact-list-item:not(:last-child),
 .navbar-list-item:not(:last-child) {
   margin-right: 50px;
-}
-
-.contact-list-item,
-.navbar-list-item {
-  padding-top: 32px;
-  padding-bottom: 31px;
 }
 
 .accent-text {
