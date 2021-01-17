@@ -25,36 +25,15 @@ li {
 }
 /* ========= END GENERAL ==========*/
 
-
-/* ========= REFERENCES ==========*/
-a {
-  text-decoration: none;
+/* ============ HIDDEN ELEMENTS ============ */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
-
-.link {
-  text-decoration: none;
-  color: var(--main-color);
-}
-
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-}
-
-.examples-list .link {
-  color: var(--main-color);
-}
-
-.examples-list .link:hover,
-.examples-list .link:focus {
-  color: var(--main-color);
-}
-
-.contact-list-item .link,
-.navbar-list-item .link {
-  padding: 24px 0;
-}
-/* ========= END REFERENCES ==========*/
+/* ============ END HIDDEN ELEMENTS ============ */
 
 /* ========= SECTIONS ========== */
 
@@ -64,12 +43,8 @@ a {
   margin: 0 auto;
 }
 
+.navbar,
 .menu {
-  display: flex;
-  align-items: center;
-}
-
-.navbar {
   display: flex;
   align-items: center;
 }
@@ -77,29 +52,66 @@ a {
 .hero .container {
   width: 700px;
   padding: 200px 2px 200px;
-  text-align: center;
 }
 
+.team-section .container,
 .qualities-section .container {
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .work-section .container,
-.team-section .container {
-  text-align: center;
+.team-section .container,
+.qualities-section .container {
   padding-bottom: 94px;
 }
 
-.team-section .container{
-  padding-top: 94px;
+.hero .container,
+.work-section .container,
+.team-section .container {
+  text-align: center;
+}
+
+.hero,
+.footer {
+  background-color: var(--background-dark-color);
 }
 
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.footer {
+  color: var(--active-color);
+}
+
 /* ========= END SECTIONS ========== */
+
+/* ========= REFERENCES ==========*/
+a, 
+.link {
+  text-decoration: none;
+}
+
+.link,
+.examples-list .link,
+.examples-list .link:hover,
+.examples-list .link:focus {
+  color: var(--main-color);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+.contact-list-item .link,
+.navbar-list-item .link {
+  padding: 24px 0;
+}
+/* ========= END REFERENCES ==========*/
+
+/* ========= COMPONENTS =========== */
 
 .logo {
   margin-right: 93px;
@@ -109,18 +121,15 @@ a {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  color: var(--logo-color);
 }
 
-.footer .logo {
-  color: var(--accent-color);
-}
-
+.logo,
 .logo:hover,
 .logo:focus {
   color: var(--logo-color);
 }
 
+.footer .logo,
 .footer .logo:hover,
 .footer .logo:focus {
   color: var(--accent-color);
@@ -197,18 +206,8 @@ a {
   line-height: 1.7;
 }
 
-/* ============ HIDDEN ELEMENTS ============ */
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-}
-/* ============ END HIDDEN ELEMENTS ============ */
-
-.hero {
-  background-color: var(--background-dark-color);
+.description-text {
+  padding: 30px;
 }
 
 .hero-header {
@@ -263,14 +262,25 @@ a {
   margin: 0 0 50px;
 }
 
+.work-list {
+  display: flex;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.work-list-item {
+  width: calc((100% - 2 * 30px) / 3);
+  margin-right: 30px;
+}
+
 .team-section-header {
   margin-top: 0;
   margin-bottom: 50px;
 }
 
 .team-list-header {
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin: 0 0 10px;
+
   font-weight: 500;
   font-size: 16px;
 }
@@ -286,29 +296,22 @@ a {
 }
 
 .team-list-text {
-  margin-top: 10px;
-  margin-bottom: 30px;
-
+  margin: 0 0;
   font-weight: 400;
   font-size: 16px;
 
   color: var(--inactive-color);
 }
 
-.footer {
-  background-color: var(--background-dark-color);
-  color: var(--active-color);
-}
-
 .footer .logo {
+  display: inline-block;
   padding: 1px 0;
-  margin: 0 0;
+  margin: 0 0 20px;
 }
 
 .address {
   font-style: normal;
   line-height: 1.7;
-  margin-top: 20px;
 }
 
 .address-text {
@@ -323,6 +326,8 @@ a {
 .address-list-item:not(:last-child) {
   margin-bottom: 6px;
 }
+
+/* ========= END COMPONENTS =========== */
 
 /* ========== BUTTONS ========== */
 
@@ -369,7 +374,7 @@ a {
 
 /* ========== END BUTTONS ========== */
 
-/* Далее стили только portfolio.html */
+/* Далее стили portfolio.html */
 
 .bordered {
   border-bottom: 1px solid #ECECEC;
@@ -393,20 +398,32 @@ a {
 }
 
 .examples-list-item {
-  width: calc((100% - 2*30px) / 3);
+  width: calc((100% - 2 * 30px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
   border: 1px solid #EEEEEE;
 }
 
-.examples-list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
+.examples-section .button {
+  padding: 6px 22px;
 }
 
-.examples-list-item:nth-child(-n + 6) {
-  margin-bottom: 30px;
+.work-list-item:last-child,
+.examples-list-item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.examples-list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.example-description {
+  padding: 20px 24px 20px;
 }
 
 .example-header {
-  margin: 20px 24px 4px;
+  margin: 0 0 4px;
 
   font-size: 18px;
   font-weight: 700;
@@ -416,7 +433,7 @@ a {
 }
 
 .example-text {
-  margin: 0 24px 20px;
+  margin: 0 0;
 
   font-size: 16px;
   font-weight: 400;
@@ -426,4 +443,3 @@ a {
 
   color: var(--inactive-color);
 }
-
