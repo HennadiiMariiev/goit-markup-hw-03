@@ -89,16 +89,13 @@ li {
 
 .hero,
 .footer {
+  color: var(--active-color);
   background-color: var(--background-dark-color);
 }
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.footer {
-  color: var(--active-color);
 }
 
 /* ========= END SECTIONS ========== */
@@ -222,15 +219,11 @@ li {
 
 .hero-header {
   margin: 0 auto 30px;
-  padding: 0 2px;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
   letter-spacing: .06em;
-
-  color: var(--active-color);
-  background-color: var(--background-dark-color);
 
   text-transform: uppercase;
 }
@@ -378,7 +371,7 @@ li {
   border-bottom: 1px solid var(--portfolio-border-color);
 }
 
-.examples-section .container {
+.examples-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
