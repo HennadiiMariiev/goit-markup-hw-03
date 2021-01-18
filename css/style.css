@@ -21,6 +21,11 @@ body {
   color: var(--main-color);
 }
 
+a {
+  text-decoration: none;
+  display: block;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -95,11 +100,6 @@ li {
 /* ========= END SECTIONS ========== */
 
 /* ========= REFERENCES ==========*/
-a {
-  text-decoration: none;
-  display: block;
-}
-
 .link,
 .examples-list .link,
 .examples-list .link:hover,
