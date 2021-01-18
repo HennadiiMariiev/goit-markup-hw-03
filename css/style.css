@@ -8,6 +8,7 @@
   --active-color: #FFFFFF;
   --inactive-color: #757575;
   --border-color: #EEEEEE;
+  --portfolio-border-color: #ECECEC;
 }
 /* ========= END FONT and COLOR ==========*/
 
@@ -61,25 +62,28 @@ li {
   align-items: center;
 }
 
-.hero .container {
-  width: 696px;
+.hero {
   padding: 200px 0;
 }
 
-.team-section .container,
-.qualities-section .container {
+.hero .container {
+  width: 696px;
+}
+
+.team-section,
+.qualities-section{
   padding-top: 94px;
 }
 
-.work-section .container,
-.team-section .container,
-.qualities-section .container {
+.work-section,
+.team-section,
+.qualities-section{
   padding-bottom: 94px;
 }
 
-.hero .container,
-.work-section .container,
-.team-section .container {
+.hero,
+.work-section,
+.team-section {
   text-align: center;
 }
 
@@ -88,7 +92,7 @@ li {
   background-color: var(--background-dark-color);
 }
 
-.footer .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -114,7 +118,7 @@ li {
 
 .contact-list-item .link,
 .navbar-list-item .link {
-  padding: 31px 0;
+  padding: 32px 0;
 }
 /* ========= END REFERENCES ==========*/
 
@@ -142,13 +146,22 @@ li {
   color: var(--accent-color);
 }
 
+
+.contact-list, 
+.navbar-list,
+.section-list,
+.example-text,
+.small-header,
+.work-list,
+.team-list-text,
+.address-text {
+  margin: 0;
+}
+
 .contact-list, 
 .navbar-list {
   font-weight: 500;
   letter-spacing: .02em;
-  display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .contact-list {
@@ -175,11 +188,6 @@ li {
     rgba(0, 0, 0, 0.14), 0px 2px 1px
      rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-list-item,
-.examples-list-item {
-  display: block;
 }
 
 .team-list-item:not(:last-child) {
@@ -213,7 +221,7 @@ li {
 }
 
 .hero-header {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 0 2px;
 
   font-weight: 900;
@@ -227,14 +235,16 @@ li {
   text-transform: uppercase;
 }
 
-.section-list {
+.contact-list, 
+.navbar-list,
+.work-list,
+.section-list,
+.examples-buttons-list  {
   display: flex;
-  margin: 0;
   padding: 0;
 }
 
 .section-list-item {
-  display: block;
   width: calc((100% - 3 * 30px) / 4 );
 }
 
@@ -247,8 +257,7 @@ li {
 }
 
 .small-header {
-  margin: 0;
-
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: inherit;
   text-transform: uppercase;
@@ -262,12 +271,6 @@ li {
 
 .work-section-header {
   margin: 0 0 50px;
-}
-
-.work-list {
-  display: flex;
-  padding: 0;
-  margin: 0;
 }
 
 .work-list-item {
@@ -288,8 +291,7 @@ li {
 }
 
 .section-text {
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin: 0;
 
   font-weight: 400;
   font-size: inherit;
@@ -298,16 +300,19 @@ li {
 }
 
 .team-list-text {
-  margin: 0;
   font-weight: 400;
   font-size: 16px;
 
   color: var(--inactive-color);
 }
 
+.address-list,
 .footer .logo {
   display: inline-block;
-  padding: 1px 0;
+  padding: 0;
+}
+
+.footer .logo {
   margin: 0 0 20px;
 }
 
@@ -316,14 +321,8 @@ li {
   line-height: 1.7;
 }
 
-.address-text {
-  margin: 0 0 9px;
-}
-
 .address-list {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+  margin: 9px 0 0;
 }
 
 .address-list-item:not(:last-child) {
@@ -336,13 +335,12 @@ li {
 
 .hero-button {
   min-width: 200px;
-  margin-top: 30px;
   padding: 10px 32px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  letter-spacing: .06;
+  letter-spacing: .06em;
 
   background-color: var(--accent-color);
   color: var(--active-color);
@@ -354,17 +352,15 @@ li {
 }
 
 .button {
-  padding: 3px 3px;
-
-  background-color: var(--background-light-color);
-  border: 0 solid var(--background-light-color);
-  border-radius: 4px;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  letter-spacing: .03;
+  letter-spacing: .03em;
   
+  background-color: var(--background-light-color);
+  border: 0;
+  border-radius: 4px;
+
   cursor: pointer;
 }
 
@@ -372,8 +368,6 @@ li {
 .button:focus {
   color: var(--active-color);  
   background-color: var(--accent-color);
-
-  border: 0 solid var(--accent-color);
 }
 
 /* ========== END BUTTONS ========== */
@@ -381,7 +375,7 @@ li {
 /* Далее стили portfolio.html */
 
 .bordered {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid var(--portfolio-border-color);
 }
 
 .examples-section .container {
@@ -390,8 +384,6 @@ li {
 }
 
 .examples-buttons-list {
-  display: flex;
-  padding: 0;
   margin-top: 0;
   margin-bottom: 50px;
   justify-content: center;
@@ -413,7 +405,7 @@ li {
 
 .work-list-item:last-child,
 .examples-list-item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .examples-list-item:nth-last-child(-n + 3) {
@@ -438,8 +430,6 @@ li {
 }
 
 .example-text {
-  margin: 0;
-
   font-size: 16px;
   font-weight: 400;
 
