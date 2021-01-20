@@ -151,9 +151,9 @@ li {
 .small-header,
 .work-list,
 .team-list-text,
-.address-text {
+.address-list {
   margin: 0;
-}
+} 
 
 .contact-list, 
 .navbar-list {
@@ -314,9 +314,10 @@ li {
   line-height: 1.7;
 }
 
-.address-list {
-  margin: 9px 0 0;
+.address-text {
+  margin: 0 0 9px;
 }
+
 
 .address-list-item:not(:last-child) {
   margin-bottom: 6px;
